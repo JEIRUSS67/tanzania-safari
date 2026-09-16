@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Destinations | Tanzania Safari</title>
+<meta name="description" content="Explore Tanzania's safari destinations — Serengeti, Ngorongoro, Tarangire, Lake Manyara, Kilimanjaro and Zanzibar." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/responsive.css" />
+<style>
+  .dest-row { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 4vw, 4rem); align-items: center; padding-block: clamp(3rem, 6vw, 5rem); border-bottom: 1px solid #E4DCC9; }
+  .dest-row:last-child { border-bottom: none; }
+  .dest-row:nth-child(even) .dest-row__media { order: 2; }
+  .dest-row__media img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: var(--radius-md); }
+  .dest-row__text p { color: #4A453D; margin-top: 1rem; max-width: 52ch; }
+  .dest-row__text .btn { margin-top: 1.5rem; }
+  @media (max-width: 768px) {
+    .dest-row { grid-template-columns: 1fr; }
+    .dest-row:nth-child(even) .dest-row__media { order: 0; }
+  }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="logo">TANZANIA <span>SAFARI</span></a>
+    <nav class="nav-menu" id="nav-menu" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="safaris.html">Safaris</a>
+      <a href="destinations.html" aria-current="page">Destinations</a>
+      <a href="about.html">About Us</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+      <a href="booking.html" class="btn btn--primary">Book Your Safari</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="booking.html" class="btn btn--outline">Book Your Safari</a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<div class="nav-scrim"></div>
+
+<main id="main">
+  <section class="page-hero">
+    <div class="page-hero__media"><img src="images/cheetah.jpg" alt="Cheetah surveying the Tanzanian grassland" /></div>
+    <div class="page-hero__overlay"></div>
+    <div class="container page-hero__content">
+      <div class="breadcrumb"><a href="index.html">Home</a> / Destinations</div>
+      <h1 style="color:#FAF7F0;">Where Your Safari Takes You</h1>
+    </div>
+  </section>
+
+  <section class="section container" style="padding-block-start:2rem;">
+
+    <div class="dest-row" id="serengeti">
+      <div class="dest-row__media reveal"><img src="images/serengeti-park-sign.jpg" alt="Entrance sign to Serengeti National Park" loading="lazy" /></div>
+      <div class="dest-row__text reveal">
+        <span class="kicker">Northern Tanzania</span>
+        <h2>Serengeti National Park</h2>
+        <p>An unbroken sweep of grassland famous for the Great Migration and one of the highest concentrations of large predators in Africa. The scale of the landscape is part of the experience &mdash; horizon in every direction.</p>
+        <a href="safari-details.html?safari=serengeti" class="btn btn--dark">View Serengeti Safaris</a>
+      </div>
+    </div>
+
+    <div class="dest-row" id="ngorongoro">
+      <div class="dest-row__media reveal"><img src="images/ngorongoro-crater.jpg" alt="View across the Ngorongoro Crater floor from the rim" loading="lazy" /></div>
+      <div class="dest-row__text reveal">
+        <span class="kicker">Rift Valley Highlands</span>
+        <h2>Ngorongoro Conservation Area</h2>
+        <p>A collapsed volcanic caldera enclosing its own self-sustaining ecosystem. The crater floor holds resident wildlife year-round, making it one of the most reliable places in Tanzania to see the "big five" in a single day.</p>
+        <a href="safari-details.html?safari=ngorongoro" class="btn btn--dark">View Ngorongoro Safaris</a>
+      </div>
+    </div>
+
+    <div class="dest-row" id="tarangire">
+      <div class="dest-row__media reveal"><img src="images/elephant-flowers.jpg" alt="Elephant grazing among wildflowers near Tarangire" loading="lazy" /></div>
+      <div class="dest-row__text reveal">
+        <span class="kicker">Northern Tanzania</span>
+        <h2>Tarangire National Park</h2>
+        <p>Known for ancient baobab trees and elephant herds that gather along the Tarangire River in the dry season. Quieter than the Serengeti, with a distinct, dramatic landscape.</p>
+        <a href="safari-details.html?safari=tarangire" class="btn btn--dark">View Tarangire Safaris</a>
+      </div>
+    </div>
+
+    <div class="dest-row" id="manyara">
+      <div class="dest-row__media reveal"><img src="images/manyara-flamingos.jpg" alt="Flamingos over the shore of Lake Manyara" loading="lazy" /></div>
+      <div class="dest-row__text reveal">
+        <span class="kicker">Rift Valley Floor</span>
+        <h2>Lake Manyara</h2>
+        <p>A compact park set beneath the Rift Valley escarpment, with groundwater forest, an alkaline lake shoreline, and a reputation for tree-climbing lions.</p>
+        <a href="safari-details.html?safari=manyara" class="btn btn--dark">View Manyara Safaris</a>
+      </div>
+    </div>
+
+    <div class="dest-row" id="kilimanjaro">
+      <div class="dest-row__media reveal"><img src="images/mtkilimanjaro.jpg" alt="Elephant beneath the snow-capped peak of Mount Kilimanjaro" loading="lazy" /></div>
+      <div class="dest-row__text reveal">
+        <span class="kicker">Kilimanjaro Region</span>
+        <h2>Mount Kilimanjaro</h2>
+        <p>Africa's highest peak, free-standing above the surrounding plains. Several routes to the summit exist, each with a different balance of scenery, traffic and acclimatisation time.</p>
+        <a href="safari-details.html?safari=kilimanjaro" class="btn btn--dark">View Kilimanjaro Trek</a>
+      </div>
+    </div>
+
+    <div class="dest-row" id="zanzibar">
+      <div class="dest-row__media reveal"><img src="images/zanzibar-beach-lounge.jpg" alt="Beachfront lounge area on the Zanzibar coast" loading="lazy" /></div>
+      <div class="dest-row__text reveal">
+        <span class="kicker">Indian Ocean Coast</span>
+        <h2>Zanzibar</h2>
+        <p>White sand beaches, warm turquoise water, and Stone Town's centuries of Swahili, Arab and colonial history. A natural pairing with a northern circuit safari.</p>
+        <a href="safari-details.html?safari=zanzibar" class="btn btn--dark">View Zanzibar Experience</a>
+      </div>
+    </div>
+
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">TANZANIA <span>SAFARI</span></a>
+        <p>A Tanzania-based safari planning team creating handcrafted journeys across the Serengeti, Ngorongoro, Tarangire and beyond.</p>
+        <div class="social-row">
+          <a href="http://tiktok.com/@tanzaniasafari" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 9h3V6h-3c-2 0-3 1-3 3v2H9v3h2v6h3v-6h3l1-3h-4V9z"/></svg></a>
+          <a href="http://istangram.com/@tanzaniasafari" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="http://wa.me/+255746451988" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21l1.6-4.8A8.5 8.5 0 1112 20.5a8.4 8.4 0 01-4.9-1.6L3 21z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h4>Safaris</h4>
+        <ul><li><a href="safari-details.html?safari=serengeti">Serengeti Safari</a></li><li><a href="safari-details.html?safari=ngorongoro">Ngorongoro Crater Safari</a></li><li><a href="safari-details.html?safari=tarangire">Tarangire Safari</a></li><li><a href="safaris.html">All Safaris</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul><li>Arusha, Tanzania </li><li>info@tanzaniasafari.tz</li><li>+255 746451988</li></ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Tanzania Safari. All rights reserved.</span>
+      <span>#Tanzania&mdash;Safari.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Gallery | Tanzania Safari</title>
+<meta name="description" content="A photo gallery of Tanzania's wildlife, landscapes and safari life." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="logo">TANZANIA <span>SAFARI</span></a>
+    <nav class="nav-menu" id="nav-menu" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="safaris.html">Safaris</a>
+      <a href="destinations.html">Destinations</a>
+      <a href="about.html">About Us</a>
+      <a href="gallery.html" aria-current="page">Gallery</a>
+      <a href="contact.html">Contact</a>
+      <a href="booking.html" class="btn btn--primary">Book Your Safari</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="booking.html" class="btn btn--outline">Book Your Safari</a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<div class="nav-scrim"></div>
+
+<main id="main">
+  <section class="page-hero" style="min-height:38vh;">
+    <div class="page-hero__media"><img src="images/rhino.jpg" alt="Rhino resting in the grass" /></div>
+    <div class="page-hero__overlay"></div>
+    <div class="container page-hero__content">
+      <div class="breadcrumb"><a href="index.html">Home</a> / Gallery</div>
+      <h1 style="color:#FAF7F0;">Safari Gallery</h1>
+    </div>
+  </section>
+
+  <section class="section container">
+    <div class="gallery-grid">
+
+      <button class="gallery-item gallery-item--wide reveal" data-caption="Lion pride resting in the Serengeti">
+        <img src="images/lion-pride.jpg" alt="Lion pride resting on a fallen tree in the Serengeti" loading="lazy" />
+      </button>
+      <button class="gallery-item reveal" data-caption="Elephant herd at sunset, Tarangire">
+        <img src="images/elephant-flowers.jpg" alt="Elephant grazing among wildflowers, Ngorongoro highlands" loading="lazy" />
+      </button>
+      <button class="gallery-item reveal" data-caption="Ngorongoro Crater floor from the rim">
+        <img src="images/ngorongoro-crater.jpg" alt="Ngorongoro Crater floor viewed from the rim" loading="lazy" />
+      </button>
+      <button class="gallery-item reveal" data-caption="Safari vehicle on the Serengeti plains">
+        <img src="images/cape-buffalo.jpg" alt="Cape buffalo standing in open grassland" loading="lazy" />
+      </button>
+      <button class="gallery-item gallery-item--wide reveal" data-caption="Mount Kilimanjaro above the clouds">
+        <img src="images/kilimanjaro-elephant.jpg" alt="Mount Kilimanjaro rising above the clouds" loading="lazy" />
+      </button>
+      <button class="gallery-item reveal" data-caption="Giraffe against an acacia sunset">
+        <img src="images/hero-sunset-giraffe.jpg" alt="Giraffes silhouetted against an acacia sunset" loading="lazy" />
+      </button>
+      <button class="gallery-item reveal" data-caption="Zanzibar beach at low tide">
+        <img src="images/zanzibar-beach-lounge.jpg" alt="Zanzibar beach lounge at the shoreline" loading="lazy" />
+      </button>
+      <button class="gallery-item reveal" data-caption="Maasai cultural visit near Ngorongoro">
+        <img src="images/maasai-procession.jpg" alt="Maasai community members in traditional dress" loading="lazy" />
+      </button>
+      <button class="gallery-item reveal" data-caption="Cheetah scanning the grassland">
+        <img src="images/cheetah.jpg" alt="Cheetah scanning the grassland" loading="lazy" />
+      </button>
+      <button class="gallery-item gallery-item--wide reveal" data-caption="Sunrise over the Serengeti plains">
+        <img src="images/manyara-flamingos-wide.jpg" alt="Flamingos over Lake Manyara at dusk" loading="lazy" />
+      </button>
+      <button class="gallery-item reveal" data-caption="Hot air balloon safari at dawn">
+        <img src="images/hot-air-balloons.jpg" alt="Hot air balloon safari at dawn over the Serengeti" loading="lazy" />
+      </button>
+      <button class="gallery-item reveal" data-caption="Flamingos on Lake Manyara">
+        <img src="images/stone-town-zanzibar.jpg" alt="Historic Stone Town architecture, Zanzibar" loading="lazy" />
+      </button>
+
+    </div>
+  </section>
+</main>
+
+<!-- Lightbox -->
+<div class="lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Image viewer">
+  <div class="lightbox__frame">
+    <img src="" alt="" />
+    <button class="lightbox__close" aria-label="Close image viewer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <button class="lightbox__prev" aria-label="Previous image">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 6l-6 6 6 6"/></svg>
+    </button>
+    <button class="lightbox__next" aria-label="Next image">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+    </button>
+  </div>
+  <p class="lightbox__caption"></p>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">TANZANIA <span>SAFARI</span></a>
+        <p>A Tanzania-based safari planning team creating handcrafted journeys across the Serengeti, Ngorongoro, Tarangire and beyond.</p>
+        <div class="social-row">
+          <a href="http://tiktok.com/@tanzaniasafari" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 9h3V6h-3c-2 0-3 1-3 3v2H9v3h2v6h3v-6h3l1-3h-4V9z"/></svg></a>
+          <a href="http://istangram.com/@tanzaniasafari" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="http://wa.me/+255746451988" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21l1.6-4.8A8.5 8.5 0 1112 20.5a8.4 8.4 0 01-4.9-1.6L3 21z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h4>Safaris</h4>
+        <ul><li><a href="safari-details.html?safari=serengeti">Serengeti Safari</a></li><li><a href="safari-details.html?safari=ngorongoro">Ngorongoro Crater Safari</a></li><li><a href="safari-details.html?safari=tarangire">Tarangire Safari</a></li><li><a href="safaris.html">All Safaris</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul><li>Arusha, Tanzania </li><li>info@tanzaniasafari.tz</li><li>+255 746451988</li></ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Tanzania Safari. All rights reserved.</span>
+      <span>#Tanzania&mdash;Safari.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js" defer></script>
+<script src="js/gallery.js" defer></script>
+</body>
+</html>
+

@@ -1,0 +1,129 @@
+/* =====================================================
+   RESPONSIVE LAYER
+   Mobile-first overrides layered on style.css, which is
+   authored at a comfortable desktop measure. Breakpoints
+   step down from desktop to tablet to phone.
+   ===================================================== */
+
+/* ---------- TABLET (≤ 1024px) ---------- */
+@media (max-width: 1024px) {
+  .intro { grid-template-columns: 1fr; }
+  .intro__media { max-width: 480px; margin-inline: auto; }
+
+  .card-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .dest-grid { grid-template-columns: repeat(4, 1fr); grid-auto-rows: 200px; }
+  .dest-tile { grid-column: span 2 !important; grid-row: span 1 !important; }
+  .dest-tile--lg { grid-row: span 2 !important; }
+
+  .benefit-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .exp-grid { grid-template-columns: repeat(3, 1fr); }
+  .exp-panel:nth-child(4), .exp-panel:nth-child(5) { display: none; }
+
+  .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+
+  .booking-wrap { grid-template-columns: 1fr; }
+  .booking-info { order: 2; }
+
+  .contact-grid { grid-template-columns: 1fr; }
+
+  .detail-grid { grid-template-columns: 1fr; }
+  .detail-sidebar { position: static; }
+
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 2.5rem 1.5rem; }
+  .footer-brand { grid-column: 1 / -1; }
+}
+
+/* ---------- SMALL TABLET / LARGE PHONE (≤ 768px) ---------- */
+@media (max-width: 768px) {
+  .nav-menu {
+    position: fixed;
+    inset: 0 0 0 auto;
+    width: min(320px, 84vw);
+    height: 100vh;
+    background: var(--color-forest);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 6.5rem 2rem 2rem;
+    gap: 1.75rem;
+    transform: translateX(100%);
+    transition: transform var(--dur-med) var(--ease-out);
+    box-shadow: -12px 0 32px rgba(0,0,0,0.25);
+  }
+  .nav-menu.is-open { transform: translateX(0); }
+  .nav-menu a { font-size: 1.05rem; }
+  .nav-actions .btn--outline { display: none; }
+  .nav-toggle { display: inline-flex; }
+
+  .nav-scrim {
+    position: fixed;
+    inset: 0;
+    background: rgba(11,13,9,0.5);
+    z-index: 499;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--dur-med) var(--ease-out);
+  }
+  .nav-scrim.is-open { opacity: 1; pointer-events: auto; }
+
+  .hero__ctas { flex-direction: column; align-items: stretch; }
+  .hero__ctas .btn { justify-content: center; }
+
+  .card-grid { grid-template-columns: 1fr; }
+
+  .dest-grid { grid-template-columns: repeat(2, 1fr); }
+  .dest-tile { grid-column: span 2 !important; grid-row: span 1 !important; aspect-ratio: 4/3; height: auto; }
+
+  .benefit-grid { grid-template-columns: 1fr; }
+
+  .exp-grid { grid-template-columns: repeat(2, 1fr); }
+  .exp-panel:nth-child(3) { display: none; }
+
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .gallery-item--wide { grid-column: span 2; }
+
+  .form-grid { grid-template-columns: 1fr; }
+
+  .lightbox__prev, .lightbox__next {
+    top: auto;
+    bottom: -3.5rem;
+    transform: none;
+  }
+  .lightbox__prev { left: 0.5rem; }
+  .lightbox__next { right: 0.5rem; }
+  .lightbox__close { top: -3rem; right: 0; }
+
+  .footer-grid { grid-template-columns: 1fr; }
+}
+
+/* ---------- PHONE (≤ 480px) ---------- */
+@media (max-width: 480px) {
+  .container { padding-inline: 1.25rem; }
+  .hero__content { max-width: 100%; }
+  .stat-badge {
+    position: static;
+    margin-top: -2rem;
+    max-width: 100%;
+  }
+  .intro__media .stat-badge { position: static; margin-top: 1rem; }
+
+  .dest-grid { grid-template-columns: 1fr; }
+  .dest-tile { grid-column: span 1 !important; }
+
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .footer-bottom { flex-direction: column; align-items: flex-start; }
+}
+
+/* ---------- Fine pointer / hover-capable only:
+   avoid sticky hover states lingering on touch ---------- */
+@media (hover: none) {
+  .safari-card:hover .safari-card__media img,
+  .dest-tile:hover img,
+  .exp-panel:hover img,
+  .gallery-item:hover img {
+    transform: none;
+  }
+}
